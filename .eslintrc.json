@@ -3,7 +3,8 @@
   "rules": {
     "prettier/prettier": ["error", {
       "endOfLine": "auto",
-      "singleQuote": true
+      "singleQuote": true,
+      "tabWidth": 4
     }]
   }
 }
