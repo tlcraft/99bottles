@@ -3,8 +3,7 @@ export interface INintyNineBottles {
 }
 
 export class NintyNineBottles implements INintyNineBottles {
-    singSong(): void {
-        let numberOfBottles = 99;
+    singSong(numberOfBottles = 99): void {
         while (numberOfBottles) {
             console.log(
                 `${numberOfBottles} bottles of beer on the wall, ${numberOfBottles} bottles of beer.`
