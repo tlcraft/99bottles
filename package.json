@@ -11,7 +11,7 @@
   "keywords": [],
   "scripts": {
     "start": "node dist/index.js",
-    "test": "echo \"Error: no test specified\" && exit 1",
+    "test": "jest",
     "lint": "gts lint",
     "clean": "gts clean",
     "compile": "tsc",
@@ -27,6 +27,7 @@
   },
   "dependencies": {
     "@types/jest": "^26.0.14",
+    "jest": "^26.5.3",
     "ts-node": "^9.0.0"
   }
 }
