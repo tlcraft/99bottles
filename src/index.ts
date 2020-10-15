@@ -1,4 +1,4 @@
-import {NintyNineBottles} from './service/ninty-nine-bottle';
+import {NintyNineBottles} from './services/ninty-nine-bottles';
 
 export function execute(): void {
     console.log('Starting to sing...');
