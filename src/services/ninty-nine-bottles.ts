@@ -1,5 +1,5 @@
 export interface INintyNineBottles {
-    singSong(): void;
+    singSong(numberOfBottles: number): void;
 }
 
 export class NintyNineBottles implements INintyNineBottles {
