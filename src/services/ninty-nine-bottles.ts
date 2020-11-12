@@ -6,13 +6,12 @@ export class NintyNineBottles implements INintyNineBottles {
     singSong(numberOfBottles = 99): void {
         while (numberOfBottles) {
             if (numberOfBottles >= 2) {
+                const currentBottles = this.getBottles(numberOfBottles);
                 console.log(
-                    `${numberOfBottles} bottles of beer on the wall, ${numberOfBottles} bottles of beer.`
+                    `${currentBottles} of beer on the wall, ${currentBottles} of beer.`
                 );
                 numberOfBottles--;
-                const remainingBottles = this.getRemainingBottles(
-                    numberOfBottles
-                );
+                const remainingBottles = this.getBottles(numberOfBottles);
                 console.log(
                     `Take one down, pass it around, ${remainingBottles} of beer on the wall...`
                 );
@@ -35,7 +34,7 @@ export class NintyNineBottles implements INintyNineBottles {
         );
     }
 
-    private getRemainingBottles(numberOfBottles: number): string {
+    private getBottles(numberOfBottles: number): string {
         if (numberOfBottles === 1) {
             return '1 bottle';
         } else if (numberOfBottles === 6) {
