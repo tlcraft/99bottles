@@ -5,21 +5,16 @@ export interface INintyNineBottles {
 export class NintyNineBottles implements INintyNineBottles {
     singSong(numberOfBottles = 99): void {
         while (numberOfBottles) {
-            if (numberOfBottles >= 3) {
+            if (numberOfBottles >= 2) {
                 console.log(
                     `${numberOfBottles} bottles of beer on the wall, ${numberOfBottles} bottles of beer.`
                 );
                 numberOfBottles--;
-                console.log(
-                    `Take one down, pass it around, ${numberOfBottles} bottles of beer on the wall...`
+                const remainingBottles = this.getRemainingBottles(
+                    numberOfBottles
                 );
-            } else if (numberOfBottles === 2) {
                 console.log(
-                    `${numberOfBottles} bottles of beer on the wall, ${numberOfBottles} bottles of beer.`
-                );
-                numberOfBottles--;
-                console.log(
-                    `Take one down, pass it around, ${numberOfBottles} bottle of beer on the wall...`
+                    `Take one down, pass it around, ${remainingBottles} of beer on the wall...`
                 );
             } else {
                 console.log(
@@ -38,5 +33,11 @@ export class NintyNineBottles implements INintyNineBottles {
         console.log(
             'Go to the store and buy some more, 99 bottles of beer on the wall...'
         );
+    }
+
+    private getRemainingBottles(numberOfBottles: number): string {
+        return numberOfBottles === 1
+            ? '1 bottle'
+            : `${numberOfBottles} bottles`;
     }
 }
