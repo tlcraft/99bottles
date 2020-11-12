@@ -36,8 +36,12 @@ export class NintyNineBottles implements INintyNineBottles {
     }
 
     private getRemainingBottles(numberOfBottles: number): string {
-        return numberOfBottles === 1
-            ? '1 bottle'
-            : `${numberOfBottles} bottles`;
+        if (numberOfBottles === 1) {
+            return '1 bottle';
+        } else if (numberOfBottles === 6) {
+            return '1 six pack';
+        } else {
+            return `${numberOfBottles} bottles`;
+        }
     }
 }
